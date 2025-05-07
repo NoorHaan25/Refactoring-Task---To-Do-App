@@ -1,0 +1,112 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+}
+body{
+  font-family: 'Poppins', sans-serif;
+}
+h1 {
+  font-family: "Sofadi One", system-ui;
+}
+input , button{
+  border: none;
+  outline: none;
+}
+.to-do-list{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper-input{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+.wrapper-input input{
+  width: 50%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.216);
+  outline: none;
+  padding: 10px 10px;
+  width: 60%;
+  border-radius: 5px;
+  background-color: transparent;
+  margin-right: 7px;
+}
+.wrapper-input button{
+  width: 20%;
+  padding: 10px 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #da8cff, #9a55ff);
+  color: #ffffff;
+  margin: 10px 0;
+}
+.wrapper-list{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 20px;
+}
+#taskList{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: 1px solid rgba(0, 0, 0, 0.216); */
+  width: 60%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+#taskList li{
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.216);
+  padding: 20px ;
+}
+#taskList li:last-child{
+  border: none;
+}
+#taskList li span{
+  padding-left: 10px ;
+}
+#taskList li i{
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.checkbox{
+  appearance: none;
+  height: 30px;
+  width: 30px;
+  border-radius: 5px;
+  background-color: #d5d5d5;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.checkbox::after{
+  content: "\f00c";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 18px;
+  display: none;
+  color: #fff;
+}
+.checkbox:checked::after{
+  display: flex;
+}
+.checkbox:checked{
+  background-color: #9a55ff;
+  color: #fff;
+}
